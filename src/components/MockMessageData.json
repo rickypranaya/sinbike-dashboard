@@ -1,0 +1,23 @@
+[
+    {
+        "avatar":  null,
+        "user_id":"1",
+        "user_name":"Ricky Pranaya",
+        "message":"messages 1 is here",
+        "created_at":"10:21"
+    },
+    {
+        "avatar":  null,
+        "user_id":"2",
+        "user_name":"John Doe",
+        "message":"messages 2 is here",
+        "created_at":"10:11"
+    },
+    {
+        "avatar":  null,
+        "user_id":"3",
+        "user_name":"Aditya",
+        "message":"messages 3 is here",
+        "created_at":"14:41"
+    }
+]

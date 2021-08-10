@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,3 +37,435 @@
     transform: rotate(360deg);
   }
 }
+
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(./assets/login_bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login-div{
+  background-color: white;
+  box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+
+  display: flex;
+  flex-direction: row;
+  border-radius: 20px;
+
+}
+.login-div-left{
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 10px 0 ;
+  background-color: white;
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-div-right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #FFE2CD;
+  width: 20vw;
+}
+
+.login input[type=text] {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid#8c8c8c;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 20px ;
+}
+
+.login input[type=password] {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid#8c8c8c;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 20px ;
+}
+
+.login button {
+  background-color: #FF6B37; 
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 70%;
+  padding: 10px 10px;
+  border-radius: 50px;
+  margin: 50px 0;
+}
+
+.sideNav {
+  width: 15vw;
+  background-color:#FFE2CD ;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 2vw;
+}
+
+.main-right{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.sideNav-tab{
+  display: flex;
+  align-items: center;
+  padding:10px 0;
+  font-weight: 500;
+  transition: 0.2s;
+  color: black;
+  margin: 5px 0;
+  /* border-right: 5px solid #FF6B37; */
+  text-decoration: none;
+}
+
+
+.sideNav-tab:hover{
+  color: #FF6B37;
+}
+
+/*============= TABLE ============ */
+.table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+}
+
+.table td, .table th {
+/* border: 1px solid #ddd; */
+border-bottom:1px solid #ddd ;
+padding: 12px;
+text-align: left;
+max-width: 35vw;
+
+}
+
+.table tr:hover td {background-color:#f5f5f5;}
+
+.table th {
+padding-top: 12px;
+padding-bottom: 12px;
+/* background-color: #04AA6D; */
+color:#979797;
+font-weight: normal;
+}
+
+.dashboard{
+  padding:0 30px;
+}
+.report{
+  padding:0 30px;
+}
+
+
+
+.btn {
+  background-color: #ee6d04; /* Blue background */
+  border: 2px solid; /* Remove borders */
+  border-radius: 20px;
+  height: 40px;
+  width: 150px;
+  color: white; /* White text */
+  padding: 10px 14px; /* Some padding */
+  font-size: 14px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+  }
+
+  /* Darker background on mouse-over */
+  .btn:hover {
+  background-color: darkorange;
+  }
+  .btnSave {
+  background-color: #ee6d04; /* Blue background */
+  border: 2px solid; /* Remove borders */
+  border-radius: 20px;
+  height: 40px;
+  width: 150px;
+  color: white; /* White text */
+  padding: 10px 14px; /* Some padding */
+  font-size: 14px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+  }
+
+  /* Darker background on mouse-over */
+  .btnSave:hover {
+  background-color: darkorange;
+  }
+
+  .myInput {
+    background-image: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-512.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 30px;
+    width: 15%;
+    font-size: 14px;
+    padding: 12px 20px 12px 40px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-top: 12px;
+  }
+  .myLoc{
+    background-image: url('https://cdn.discordapp.com/attachments/792095024636100660/871622929857798206/gps-marker-icon-8.jpg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 25px;
+    width: 25%;
+    font-size: 14px;
+    padding: 10px 18px 10px 36px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+  }
+  .myBikeID{
+    width: 25%;
+    font-size: 14px;
+    padding: 10px 18px 10px 36px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+  }
+  .myStatus {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px 20px 12px 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+  }
+.abc {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px 20px 12px 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+  }
+
+  .review {
+    height: 100vh;
+  }
+  .review-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+
+  }
+
+  .add-bike{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .add-bike input[type=text]{
+    width: 100%;
+    padding: 5px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid#8c8c8c;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px ;
+  }
+
+  .modal-button {
+    background-color: #FF6B37; 
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding: 8px 20px;
+  border-radius: 50px;
+  }
+
+  .main-button {
+    background-color: #FF6B37; 
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding: 8px 20px;
+  border-radius: 50px;
+  }
+
+  .report-main-image{
+    object-fit: cover;
+    width: 50vh;
+    height: 35vh;
+    border-radius: 5px;
+  }
+
+  .report-column-image img {
+    object-fit: cover;
+    margin-left: 10px;
+    margin-bottom: 2.3vh;
+    width: 7vh;
+    height: 7vh;
+    border-radius: 3px;
+  }
+
+  .report-column-image{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .chat-list{
+    width: 30%;
+    height: 100vh;
+    border-Right: 1px solid #BBB;
+    max-height: 100vh;
+    overflow: scroll;
+  }
+ 
+  .message{
+    display: flex;
+    flex-direction: row;
+  }
+  .chat-card{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    /* align-items: flex-start; */
+    justify-content: space-between;
+    padding: 10px 20px;
+    /* background-color: green; */
+    border-bottom: 0.2px solid #f1f1f1;
+    border-Top: 0.2px solid #f1f1f1;
+
+  }
+
+  .avatar{
+    height: 7vh ;
+    /* min-height: 40px;
+    min-width: 40px; */
+    width: height;
+    border-radius: 50px;
+  }
+
+  .chat-feed{
+    background-color: #f1f1f1;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .chat-empty-feed{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .chat-feed-header{
+    background-color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .chat-feed-main{
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    align-items: center;
+
+  }
+
+  .chat-feed-input{
+    background-color: white;
+    border-top: 1px solid lightgrey;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .chat-feed-inputBox{
+    /* background-color: grey; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* height: 45px; */
+    /* border-radius: 10px; */
+    align-items: center;
+
+  }
+
+  .input-message{
+    display: flex;
+    flex:1;
+    font-size: 16px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid lightgrey;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+  }
+
+  .empty-feed-ill{
+    width: 40%;
+    object-fit: contain;
+
+  }

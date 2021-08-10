@@ -1,0 +1,26 @@
+[
+    {
+        "created_at":"14/05/2021",
+        "bike_id":"A001",
+        "fault":"Flat Tyre",
+        "details":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.",
+        "photos":"a photo",
+        "status":"Available"
+    },
+    {
+        "created_at":"14/05/2021",
+        "bike_id":"A002",
+        "fault":"Seat",
+        "details":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.",
+        "photos":"a photo",
+        "status":"Suspended"
+    },
+    {
+        "created_at":"14/05/2021",
+        "bike_id":"A003",
+        "fault":"Seat",
+        "details":"tyre a bit flat when i find it, seat also not tight",
+        "photos":"a photo",
+        "status":"Suspended"
+    }
+]

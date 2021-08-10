@@ -1,0 +1,26 @@
+[
+    {
+        "created_at":"14/05/2021",
+        "bike_id":"A001",
+        "type":"City Bike",
+        "location":"221 PENDING ROAD, 670221",
+        "last_ride":"07/20/2021 18:21:21",
+        "status":"Available"
+    },
+    {
+        "created_at":"12/05/2021",
+        "bike_id":"A002",
+        "type":"Road Bike",
+        "location":"114 UPPER BUKIT TIMAH RD, 588177",
+        "last_ride":"07/20/2021 13:21:21",
+        "status":"Suspended"
+    },
+    {
+        "created_at":"12/05/2021",
+        "bike_id":"A003",
+        "type":"City Bike",
+        "location":"10 WINSTED ROAD, 679923",
+        "last_ride":"07/20/2021 17:22:40",
+        "status":"Available"
+    }
+]
