@@ -1,19 +1,7 @@
 import React, { useState } from 'react'
 import db_logo from '../assets/dashboard_logo.png'
 import { useHistory } from "react-router-dom";
-import firebase from "firebase/app";
-import "firebase/auth"
-
-firebase.initializeApp({
-    apiKey: "AIzaSyC5K-ydmgJZj3z2bIRkE0wG5it9SyayQYE",
-    authDomain: "sinbike-404fb.firebaseapp.com",
-    projectId: "sinbike-404fb",
-    storageBucket: "sinbike-404fb.appspot.com",
-    messagingSenderId: "541850232398",
-    appId: "1:541850232398:web:3150ade1d2dfc42b41051f"
-  })
-
-const auth = firebase.auth();
+import {auth} from "../firebase"
 
 function Login () {
 

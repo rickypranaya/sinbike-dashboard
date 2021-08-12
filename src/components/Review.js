@@ -1,9 +1,35 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import { AiFillStar } from 'react-icons/ai'
 import { AiOutlineStar } from 'react-icons/ai'
+import axios from "axios"
 
 
 function Review () {
+
+    const[data, setData]= useState([])
+
+    useEffect( () => {
+        fetchData()
+        
+    },[]);
+    async function fetchData() {
+        try {
+        const result = await axios.post("https://sinbike.herokuapp.com/api/reviews")
+        const resultData = result.data.data;
+        setData(resultData)
+
+        } catch (error) {
+        console.error(error);
+        }
+    }
+
+    const dateFormat =(inputDate)=>{
+        var date = new Date(inputDate)
+        var day = date.getDate().toString().length == 1? '0'+date.getDate().toString() : date.getDate().toString()
+        var month = (date.getMonth()+1).toString().length == 1? '0'+(date.getMonth()+1).toString() : (date.getMonth()+1).toString()
+        var formatted = date.getFullYear() +'-'+month+'-'+ day
+        return formatted
+    }
 
     const ratings =(val)=>{
         var fill = val
@@ -20,7 +46,7 @@ function Review () {
         }
 
         return(
-            <div style={{display:'flex'}}>
+            <div style={{display:'flex',}}>
                 {fillStar.map(function(d, idx){
                     return (<div>{d}</div>)
                 })}
@@ -30,56 +56,74 @@ function Review () {
             </div>
         )
     }
+
+    const renderCard = ()=>{
+        var datas = data;
+
+        return (
+                <div>
+                {datas.map(function(d, idx){
+                return (
+                    <div className="review-box">
+                        <div style={{display:'flex', flexDirection:'column', alignItems:'flex-start', width:'10vw'}}>
+                        <div>
+                            <span style={{fontWeight:'600'}}>Date :</span> 
+                        </div>
+                        
+                        <div style={{textAlign:'left'}}>
+                        <span style={{fontWeight:'600'}}>Bike ID :</span>
+                        </div>
+                        
+                        <div style={{textAlign:'left'}}>
+                        <span style={{fontWeight:'600'}}>User ID :</span>
+                        </div>
+                        
+                        <div style={{textAlign:'left'}}>
+                        <span style={{fontWeight:'600'}}>User Name :</span>
+                        </div>
+                        
+                    </div>
+                    
+                    <div style={{display:'flex', flexDirection:'column', alignItems:'flex-start'}}>
+                        <div>
+                            {dateFormat(d.created_at)}
+                        </div>
+                        
+                        <div>
+                            {d.bike_id}
+                        </div>
+                        
+                        <div>
+                            {d.user_id}
+                        </div>
+                        
+                        <div>
+                            {d.full_name}
+                        </div>
+
+                        
+                    </div>
+                    <div style={{textAlign:'left', margin:'0px 20px'}}>
+                        <span style={{fontWeight:'600'}}>Comment:</span>
+                    </div>  
+                    <div style={{textAlign:'left',flex:1, paddingRight:'20px'}}>
+                        {d.comment}
+                        </div>
+                    {ratings(d.review)}
+                    
+                </div>
+
+                )
+            })}
+            </div>
+                
+        )
+    }
+
     return (
         <div className="review">
             <h2 style={{textAlign:'left', paddingLeft:25}}>Reviews and Feedback</h2>
-
-            <div className="review-box">
-                <div style={{display:'flex', flexDirection:'column', alignItems:'flex-start', width:'10vw'}}>
-                    <div>
-                        <span style={{fontWeight:'bold'}}>Date :</span> 
-                    </div>
-                    
-                    <div style={{textAlign:'left'}}>
-                    <span style={{fontWeight:'bold'}}>Bike ID :</span>
-                    </div>
-                    
-                    <div style={{textAlign:'left'}}>
-                    <span style={{fontWeight:'bold'}}>User ID :</span>
-                    </div>
-                    
-                    <div style={{textAlign:'left'}}>
-                    <span style={{fontWeight:'bold'}}>User Name :</span>
-                    </div>
-                    <div style={{textAlign:'left'}}>
-                    <span style={{fontWeight:'bold'}}>Comment:</span>
-                    </div>
-                </div>
-                
-                <div style={{display:'flex', flexDirection:'column', alignItems:'flex-start', width:'100%'}}>
-                    <div>
-                    11/04/2021
-                    </div>
-                    
-                    <div>
-                    A001
-                    </div>
-                    
-                    <div>
-                    95
-                    </div>
-                    
-                    <div>
-                    Ricky Pranaya
-                    </div>
-
-                    <div style={{textAlign:'left'}}>
-                    After almost a month of using it, here’s my opinion. Customer support generally reply and resolve issues fast. Recommended to contact customer service through live chat. As for the app, it’s really straightforward to use.
-                    </div>
-                </div>
-                {ratings(4)}
-                
-            </div>
+            {renderCard()}
         </div>
 
     )

@@ -4,6 +4,8 @@ import Dashboard from './Dashboard';
 import Message from './Message';
 import Report from './Report';
 import Review from './Review';
+import SnackbarProvider from 'react-simple-snackbar'
+
 
 import { MdDashboard } from 'react-icons/md';
 import { IoChatboxEllipsesSharp } from 'react-icons/io5';
@@ -30,10 +32,11 @@ function Main () {
     }, [location]);
 
     return (
+        <SnackbarProvider>
         <div className="main">
             <div className="sideNav">
                 <div style={{display:'flex', flexDirection:'column'}}>
-                <img src={dashL} style={{width:'11vw', objectFit:'contain',marginBottom:50, marginTop:20, alignSelf:'flex-start'}}/>
+                <img src={dashL} style={{width:'9vw', paddingLeft:'1vw', objectFit:'contain',marginBottom:50, marginTop:20, alignSelf:'flex-start'}}/>
 
                 <Link to={`${url}`} id={`${url}`} className="sideNav-tab">
                     <MdDashboard style={{width:20, height:20, marginRight:10}}/> 
@@ -45,7 +48,7 @@ function Main () {
                 </Link>
                 <Link to={`${url}/report`} id={`${url}/report`} className="sideNav-tab">
                     <RiErrorWarningFill style={{width:20, height:20, marginRight:10}}/> 
-                    Faulty Reports
+                   <span style={{textAlign:'left'}}>Faulty Reports</span> 
                 </Link>
                 <Link to={`${url}/review`} id={`${url}/review`} className="sideNav-tab">
                     <FaStarHalfAlt style={{width:20, height:20, marginRight:10}}/> 
@@ -68,6 +71,7 @@ function Main () {
             
             </div>
         </div>
+    </SnackbarProvider>
     )
 }
 
